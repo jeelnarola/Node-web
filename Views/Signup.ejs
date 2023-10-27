@@ -1,0 +1,54 @@
+<!DOCTYPE html>signupform
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="./styl.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="row justify-content align-items">
+            <div class="logo">
+                <h1>jeel</h1> 
+            </div>
+            <nav>
+                <ul class="row">
+                    <li><a href="">home</a></li>
+                    <li><a href="">home</a></li>
+                    <li><a href="">home</a></li>
+                    <li><a href="">home</a></li>
+                </ul>
+            </nav>
+            <div class="btnh">
+                <a href="Signup"><button>Signup</button></a>
+                <a href="login"><button>Login</button></a>
+            </div>
+        </div>
+    </div>
+</header>
+    <aside id="signup">
+        <div >
+          <i class="fa-solid fa-xmark close"></i>
+          <h1>signup music app</h1>
+          <form action="/signup" id="signupform" method="post">
+            <input type="text" placeholder="First Name" id="first" name="firstname"><br>
+            <input type="text" placeholder="Last Name" name="lastname"><br>
+            <input type="text" placeholder="Email" name="email"><br>
+            <input type="text" placeholder="password" name="password"><br>
+            <button type="submit" id="signupbtn">signup</button>
+            <p>already have an account? <a href="login" class="loginsi">login in</a></p>
+          </form>
+          <div class="line"></div>
+          <a href="#">
+            <div class="google">
+              <!-- <img src="Img/google.png" alt=""> -->
+              <p>Login with google</p>
+            </div>
+          </a>
+        </div>
+      </aside>
+    
+</body>
+</html>
