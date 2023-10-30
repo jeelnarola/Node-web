@@ -262,7 +262,7 @@ header{
     cursor: pointer;
 }
 
-#forget{
+#forget,#pass{
     text-align: center;
     width: 100%;
     height: 100vh;
@@ -271,7 +271,7 @@ header{
     text-transform: capitalize;
     background-color: #25262576;
 }
-.f-d{
+.f-d,.p-d{
     position: absolute;
     top: 0px;
     left: 0px;
@@ -282,10 +282,14 @@ header{
     height: 300px;
     background-color: white;
 }
-#forget{
+#forget,#pass {
     display: none;
 }
-#f-f input{
+#f-f input {
+    margin: 20px 0px;
+    border: 1px solid black;
+}
+#pass-f input{
     margin: 20px 0px;
     border: 1px solid black;
 }
@@ -293,15 +297,15 @@ header{
     /* padding: 20px; */
 position: relative;
 }
-#f-e{
+#f-e ,#p-e{
     padding: 8px 20px;
     border-radius: 10px;
 }
-.f-d{
+.f-d ,.p-d{
     padding: 20px 0px;
     border-radius: 10px;
 }
-#f-b{
+#f-b,#p-b{
     position: absolute;
     right: 30px;
     padding: 8px 20px;

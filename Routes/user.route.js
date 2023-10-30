@@ -1,6 +1,7 @@
 const {Router}=require('express')
-const {signup, login, forget} = require('../controller/user.controller')
-const signupM = require('../middleware/signup.middleware')
+const {signup, login, forget, patch, google, reset, resetp, profile} = require('../controller/user.controller')
+const {signupM, isAuth} = require('../middleware/signup.middleware')
+const passport = require('passport')
 
 const router=Router()
 
@@ -15,8 +16,20 @@ router.get("/login",(req,res)=>{
 })
 router.post('/signup',signupM,signup)
 
-router.post("/login",login)
+router.post("/login",passport.authenticate('local',{successRedirect:"/",failureRedirect:"/login"}))
 
 router.post("/forget",forget)
+
+router.get("/forget/:id",patch)
+
+router.get('/auth/google/',passport.authenticate('google',{scope : ['profile']}))
+
+router.get('/auth/google/callback',google);
+
+router.get('/reset',isAuth,reset)
+
+router.post('/reset',resetp)
+
+router.get("/profile",isAuth,profile)
 
 module.exports=router

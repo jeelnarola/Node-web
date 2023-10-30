@@ -18,9 +18,9 @@ document.getElementById("for").addEventListener("click",(e)=>{
 // document.getElementById("f-f").addEventListener("submit",(e)=>{
 //     e.preventDefault()
 //     let email=document.getElementById("f-e").value
-//     fetch('http://127.0.0.1:8090/my/user')
-//     .then((res)=>res.json())
-//     .then((data)=>console.log(data))
-//     console.log(data);
-   
+//     if(email){
+//         document.getElementById("pass").style.display="block"
+//         document.getElementById("forget").style.display="none"
+//     }
+// // 
 // })
